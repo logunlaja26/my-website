@@ -1,15 +1,13 @@
 import React from "react"
 import { Link } from 'gatsby'
-
-import Footer from '../components/footer'
+import Layout from '../components/layout'
 
 export default function AboutPage() {
     return(
-      <div>
-        <h1>About</h1>
+      <Layout>
+        <h1>Ly Ogunlaja</h1>
         <p>About Page</p>
         <p><Link to="/contact">Want to work with me? Reach out.</Link></p>
-        <Footer/>
-      </div>
+      </Layout>
     )
   }

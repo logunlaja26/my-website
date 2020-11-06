@@ -1,13 +1,38 @@
 import React from "react"
-import Footer from '../components/footer'
+import { graphql, useStaticQuery } from 'gatsby'
+import Layout from '../components/layout'
 
 
 export default function BlogPage() {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+              frontmatter {
+                 title
+                 date
+              }
+          }
+        }
+      }
+    } 
+  `)
+
+ 
     return(
-      <div>
-        <h1>Blog</h1>
-        <h2>Posts will show up here later on.</h2>
-        <Footer/>
-      </div>
-    )
+      <Layout>
+        <h1>Blog ✍️</h1>
+        <ol>
+          {data.allMarkdownRemark.edges.map((edge) => {
+            return (
+              <li>
+                <h2>{edge.node.frontmatter.title}</h2>
+                <p>{edge.node.frontmatter.date}</p>
+              </li>
+            )
+          }) }
+        </ol>
+      </Layout>
+    )  
   }
