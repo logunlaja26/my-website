@@ -6,10 +6,11 @@
 
 module.exports = {
   siteMetadata: {
-      title: 'Lyomann',
+      title: 'Ly Ogunlaja | Technology and experiences',
       author: 'Ly Ogunlaja'
   },
   plugins: [
+      'gatsby-plugin-react-helmet',
       {
           resolve: 'gatsby-source-contentful',
           options: {
