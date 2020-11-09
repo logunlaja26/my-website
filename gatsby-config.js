@@ -5,34 +5,41 @@
  */
 
 module.exports = {
-  /* Your site config here */
   siteMetadata: {
-    title: 'Lyomann experiencies',
-    author: 'Ly Ogunlaja'
+      title: 'Lyomann',
+      author: 'Ly Ogunlaja'
   },
   plugins: [
-    'gatsby-plugin-sass',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-          name: 'src',
-          path: `${__dirname}/src/`
-      }
-  },
-  'gatsby-plugin-sharp', {
-    resolve: 'gatsby-transformer-remark',
-    options: {
-      plugins: [
-        'gatsby-remark-relative-images',
-        {
-          resolve: 'gatsby-remark-images',
+      {
+          resolve: 'gatsby-source-contentful',
           options: {
-            maxWidth: 750,
-            linkImagesToOriginal: false
+              spaceId: '9sdwt5q8qc65',
+              accessToken: '322K9HOMUnkOuTkYpUhUD5JLn2LnTqSTNci6e_IeRbU'
           }
-        }
-      ]
-    }
-  } 
-  ],
+      },
+      'gatsby-plugin-sass',
+      {
+          resolve: 'gatsby-source-filesystem',
+          options: {
+              name: 'src',
+              path: `${__dirname}/src/`
+          }
+      },
+      'gatsby-plugin-sharp',
+      {
+          resolve: 'gatsby-transformer-remark',
+          options: {
+              plugins: [
+                  'gatsby-remark-relative-images',
+                  {
+                      resolve: 'gatsby-remark-images',
+                      options: {
+                          maxWidth: 750,
+                          linkImagesToOriginal: false
+                      }
+                  }
+              ]
+          }
+      }
+  ]
 }
