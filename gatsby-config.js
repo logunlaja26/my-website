@@ -18,6 +18,13 @@ module.exports = {
               accessToken: '322K9HOMUnkOuTkYpUhUD5JLn2LnTqSTNci6e_IeRbU'
           }
       },
+      {
+        resolve: `gatsby-plugin-canonical-urls`,
+        options: {
+          siteUrl: `https://www.ly-doc.com`,
+          stripQueryString: true,
+        },
+      },
       'gatsby-plugin-sass',
       {
           resolve: 'gatsby-source-filesystem',
