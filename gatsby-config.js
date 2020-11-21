@@ -12,6 +12,14 @@ module.exports = {
   plugins: [
       'gatsby-plugin-react-helmet',
       {
+        resolve: `gatsby-plugin-google-analytics`,
+        options: {
+          trackingId: "G-CXBVLX426N",
+          // this option places the tracking script into the head of the DOM
+          head: true,
+        },
+      },
+      {
           resolve: 'gatsby-source-contentful',
           options: {
               spaceId: '9sdwt5q8qc65',
