@@ -10,15 +10,16 @@ module.exports = {
       author: 'Ly Ogunlaja'
   },
   plugins: [
-      'gatsby-plugin-react-helmet',
-      {
+    {
         resolve: `gatsby-plugin-google-analytics`,
         options: {
           trackingId: 'G-5PXH5020HL',
           // this option places the tracking script into the head of the DOM
           head: true,
+          anonymize: true,
         },
       },
+      'gatsby-plugin-react-helmet',
       {
           resolve: 'gatsby-source-contentful',
           options: {
