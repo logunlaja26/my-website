@@ -9,6 +9,7 @@ export default function ContactPage() {
       <h1>Contact 📞</h1>
       <form
         name="contact-form"
+        type="hidden"
         action="/success"
         method="post"
         data-netlify="true"
