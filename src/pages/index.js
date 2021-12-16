@@ -1,15 +1,15 @@
 import React from "react"
-import Layout from '../components/layout'
-import Head from '../components/head'
+import Layout from "../components/layout"
+import Head from "../components/head"
 import pic from "../circle-cropped.png"
 
 const IndexPage = () => {
-  return(
+  return (
     <Layout>
-      <Head title="Home"/>
+      <Head title="Home" />
       <h1>Hello.</h1>
       <h1>Im Ly Ogunlaja, a tech enthusiast living in Chicago 🧑🏿‍💻</h1>
-      <img src={pic} alt="pic" class="center"/>
+      <img src={pic} alt="pic" class="center" />
     </Layout>
   )
 }
