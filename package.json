@@ -21,6 +21,7 @@
     "gatsby-plugin-google-gtag": "^2.3.0",
     "gatsby-plugin-gtag": "^1.0.13",
     "gatsby-plugin-react-helmet": "^3.3.14",
+    "gatsby-plugin-robots-txt": "^1.7.0",
     "gatsby-plugin-sass": "^2.4.2",
     "gatsby-plugin-sharp": "^2.7.1",
     "gatsby-remark-images": "^3.4.1",
