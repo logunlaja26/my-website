@@ -1,8 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
-
-import contactStyles from "./contact.module.scss"
+import * as contactStyles from "./blog.module.scss"
 
 export default function ContactPage() {
   return (
