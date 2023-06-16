@@ -10,6 +10,9 @@ export const query = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       title
       published(formatString: "MMMM Do, YYYY")
+      body {
+        raw
+      }
     }
   }
 `
@@ -19,7 +22,7 @@ const Blog = props => {
     renderNode: {
       "embedded-asset-block": node => {
         const alt = node.data.target.fields.title["en-US"]
-        const url = node.data.target.fields.file["en-US"].url
+        const url = node.data.target.fields.file["en-US"]
         return <img alt={alt} src={url} />
       },
     },
@@ -31,7 +34,8 @@ const Blog = props => {
       <h1>{props.data.contentfulBlogPost.title}</h1>
       <p>{props.data.contentfulBlogPost.published}</p>
       {documentToReactComponents(
-        props.data.contentfulBlogPost.body.json,
+        props.data.contentfulBlogPost.body,
+        // props?.data?.contentfulBlogPost?.body?.json,
 
         options
       )}
