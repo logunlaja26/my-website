@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { BLOCKS } from "@contentful/rich-text-types"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
@@ -8,6 +9,8 @@ import Head from "../components/head"
 export const query = graphql`
   query ($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
+      contentful_id
+      __typename
       title
       published(formatString: "MMMM Do, YYYY")
       body {
@@ -20,10 +23,9 @@ export const query = graphql`
 const Blog = props => {
   const options = {
     renderNode: {
-      "embedded-asset-block": node => {
-        const alt = node.data.target.fields.title["en-US"]
-        const url = node.data.target.fields.file["en-US"]
-        return <img alt={alt} src={url} />
+      [BLOCKS.EMBEDDED_ENTRY]: node => {
+        const { title, file } = node.data.target.fields
+        return <img alt={title} src={file} />
       },
     },
   }
@@ -34,9 +36,7 @@ const Blog = props => {
       <h1>{props.data.contentfulBlogPost.title}</h1>
       <p>{props.data.contentfulBlogPost.published}</p>
       {documentToReactComponents(
-        props.data.contentfulBlogPost.body,
-        // props?.data?.contentfulBlogPost?.body?.json,
-
+        JSON.parse(props.data.contentfulBlogPost.body.raw),
         options
       )}
     </Layout>
