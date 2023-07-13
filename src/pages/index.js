@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
-import pic from "../circle-cropped.png"
+import { StaticImage } from "gatsby-plugin-image"
 
 const IndexPage = () => {
   return (
@@ -9,7 +9,11 @@ const IndexPage = () => {
       <Head title="Home" />
       <h1>Hello.</h1>
       <h1>Im Ly Ogunlaja, a tech enthusiast living in Chicago 🧑🏿‍💻</h1>
-      <img src={pic} alt="pic" class="center" />
+      <StaticImage
+        src="../images/main-page-image.png"
+        alt="pic"
+        class="center"
+      />
     </Layout>
   )
 }
