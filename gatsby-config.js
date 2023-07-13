@@ -15,6 +15,7 @@ module.exports = {
   siteMetadata: {
     title: "Ly Ogunlaja | Technology and experiences",
     author: "Ly Ogunlaja",
+    description: `My personal site displaying my work and thougths to you`,
     siteUrl,
   },
   plugins: [
