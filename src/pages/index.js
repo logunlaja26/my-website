@@ -6,6 +6,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const IndexPage = () => {
   return (
     <Layout>
+      <html lang="en" />
       <Head title="Home" />
       <h1>Hello.</h1>
       <h1>Im Ly Ogunlaja, a tech enthusiast living in Chicago 🧑🏿‍💻</h1>
