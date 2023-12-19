@@ -17,9 +17,9 @@ export default function Footer() {
   return (
     <footer className={footerStyles.footer}>
       <p>Created by {data.site.siteMetadata.author}, © 2021</p>
-      <a>
-        I can be reached here <Link to="/contact">Contact me.</Link>
-      </a>
+      <p>
+        I can be reached here <a href="/contact">Contact</a>
+      </p>
     </footer>
   )
 }
