@@ -30,6 +30,7 @@ module.exports = {
     },
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-sharp",
+    `gatsby-plugin-advanced-sitemap`,
     "gatsby-plugin-image",
     {
       resolve: "gatsby-source-contentful",
