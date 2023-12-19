@@ -71,6 +71,7 @@ module.exports = {
     },
     {
       resolve: "gatsby-plugin-robots-txt",
+      sitemap: "https://www.ly-doc.com/sitemap-index.xml",
       options: {
         resolveEnv: () => NETLIFY_ENV,
         env: {
