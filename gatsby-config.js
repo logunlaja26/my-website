@@ -13,7 +13,7 @@ const isNetlifyProduction = NETLIFY_ENV === "production"
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 module.exports = {
   siteMetadata: {
-    title: "Ly Ogunlaja | Technology and experiences",
+    title: "Technology and experiences",
     author: "Ly Ogunlaja",
     description: `My personal site displaying my work and thougths to you`,
     siteUrl,
