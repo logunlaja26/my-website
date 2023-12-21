@@ -29,6 +29,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-react-helmet",
+    `gatsby-plugin-sitemap`,
     "gatsby-transformer-sharp",
     "gatsby-plugin-image",
     {
@@ -71,7 +72,6 @@ module.exports = {
     },
     {
       resolve: "gatsby-plugin-robots-txt",
-      sitemap: "https://www.ly-doc.com/sitemap-index.xml",
       options: {
         resolveEnv: () => NETLIFY_ENV,
         env: {
