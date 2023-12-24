@@ -23,13 +23,13 @@ export default function BlogPage() {
     <Layout>
       <Head title="Blog" />
       <h1>Blog ✍️</h1>
+      <meta name="description" content="My various blog posts" />
       <ol className={blogStyles.posts}>
         {data.allContentfulBlogPost.edges.map(edge => {
           return (
             <li className={blogStyles.post}>
               <Link to={`/blog/${edge.node.slug}`}>
                 <h2>{edge.node.title}</h2>
-                <meta name="description" content="My various blog posts" />
                 <p>{edge.node.published}</p>
               </Link>
             </li>
