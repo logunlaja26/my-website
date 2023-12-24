@@ -12,7 +12,6 @@ export default function BlogPage() {
           node {
             title
             slug
-            description
             published(formatString: "MMMM Do, YYYY")
           }
         }
@@ -30,7 +29,7 @@ export default function BlogPage() {
             <li className={blogStyles.post}>
               <Link to={`/blog/${edge.node.slug}`}>
                 <h2>{edge.node.title}</h2>
-                <meta name="description" content={edge.node.description} />
+                <meta name="description" content="My various blog posts" />
                 <p>{edge.node.published}</p>
               </Link>
             </li>
